@@ -1,40 +1,52 @@
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
+html {
+    height:100%
+}
+body.signin {
+    height:auto;
+    background:url(../images/login-background.jpg) no-repeat center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    color:rgba(255,255,255,.95)
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+.signinpanel {
+    width:750px;
+    margin:10% auto 0
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
+.signinpanel .logopanel {
+    float:none;
+    width:auto;
+    padding:0;
+    background:0 0
 }
-.form-signin .checkbox {
-  font-weight: normal;
+.signinpanel .form-control {
+    display:block;
+    margin-top:15px
 }
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+.signinpanel .uname {
+    background:#fff url(../images/user.png) no-repeat 95% center;
+    color:#333
 }
-.form-signin .form-control:focus {
-  z-index: 2;
+.signinpanel .pword {
+    background:#fff url(../images/locked.png) no-repeat 95% center;
+    color:#333
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.signinpanel .code {
+    background: #fff no-repeat 95% center;color:#333; margin:0 0 15px 0;
 }
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.signinpanel .btn {
+    margin-top:15px
+}
+.signinpanel form {
+    background:rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.3);
+    -moz-box-shadow:0 3px 0 rgba(12,12,12,.03);
+    -webkit-box-shadow:0 3px 0 rgba(12,12,12,.03);
+    box-shadow:0 3px 0 rgba(12,12,12,.03);
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    padding:30px
 }
