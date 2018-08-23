@@ -19,7 +19,6 @@ public class ProductServiceImpl implements ProductService {
     public PageInfo<Product> selectProductList() {
         PageHelper.startPage(1, 5);
         List<Product> list = productMapper.selectProductList();
-        PageInfo<Product> pageInfo = new PageInfo<>(list);
-        return pageInfo;
+        return new PageInfo<>(list);
     }
 }
