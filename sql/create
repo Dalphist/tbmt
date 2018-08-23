@@ -12,4 +12,4 @@ CREATE TABLE product (
   state varchar(20) COMMENT '状态',
 	memo varchar(200) COMMENT '备注',
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
