@@ -48,12 +48,12 @@ CREATE TABLE sales_order (
 	memo varchar(200) COMMENT '备注',
   deal_date datetime COMMENT '成交时间',
   taobao_code varchar(20) COMMENT '淘宝订单号',
-  customer_name int(20) COMMENT '客户姓名',
+  customer_name varchar(20) COMMENT '客户姓名',
   customer_tel varchar(20) COMMENT '客户电话',
   customer_postcode varchar(10) COMMENT '客户邮编',
-  customer_district1_id int(4) COMMENT '收件地区一级',
-  customer_district2_id int(4) COMMENT '收件地区二级',
-  customer_district3_id int(4) COMMENT '收件地区三级',
+  customer_district1_id varchar(10) COMMENT '收件地区一级',
+  customer_district2_id varchar(10) COMMENT '收件地区二级',
+  customer_district3_id varchar(10) COMMENT '收件地区三级',
   customer_address varchar(200) COMMENT '收件地址',
 	PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

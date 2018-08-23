@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.djf.tbmt.project.system.SalesOrderMapper" >
-  <resultMap id="BaseResultMap" type="com.djf.tbmt.project.system.product.entity.SalesOrder" >
+<mapper namespace="com.djf.tbmt.project.system.sales.mapper.SalesOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.djf.tbmt.project.system.sales.entity.SalesOrder" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="product_price" property="productPrice" jdbcType="DECIMAL" />
     <result column="transport_fare" property="transportFare" jdbcType="DECIMAL" />
@@ -40,7 +40,7 @@
     delete from sales_order
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.djf.tbmt.project.system.product.entity.SalesOrder" >
+  <insert id="insert" parameterType="com.djf.tbmt.project.system.sales.entity.SalesOrder" >
     insert into sales_order (id, product_price, transport_fare, 
       extra_price, total_price, pay_type, 
       create_time, create_user, update_time, 
@@ -58,7 +58,7 @@
       #{customerDistrict2Id,jdbcType=INTEGER}, #{customerDistrict3Id,jdbcType=INTEGER}, 
       #{customerAddress,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.djf.tbmt.project.system.product.entity.SalesOrder" >
+  <insert id="insertSelective" parameterType="com.djf.tbmt.project.system.sales.entity.SalesOrder" >
     insert into sales_order
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -191,7 +191,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.djf.tbmt.project.system.product.entity.SalesOrder" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.djf.tbmt.project.system.sales.entity.SalesOrder" >
     update sales_order
     <set >
       <if test="productPrice != null" >
@@ -257,7 +257,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.djf.tbmt.project.system.product.entity.SalesOrder" >
+  <update id="updateByPrimaryKey" parameterType="com.djf.tbmt.project.system.sales.entity.SalesOrder" >
     update sales_order
     set product_price = #{productPrice,jdbcType=DECIMAL},
       transport_fare = #{transportFare,jdbcType=DECIMAL},
