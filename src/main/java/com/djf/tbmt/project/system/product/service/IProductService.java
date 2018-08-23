@@ -10,13 +10,12 @@ import java.util.List;
 @Service
 public class IProductService implements ProductService {
 
-//    @Autowired
-//    private ProductMapper productMapper;
+    @Autowired
+    private ProductMapper productMapper;
 
     @Override
     public List<Product> selectProductList() {
 
-//        return productMapper.selectProductList();
-        return null;
+        return productMapper.selectProductList();
     }
 }
