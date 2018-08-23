@@ -1,11 +1,13 @@
 package com.djf.tbmt.project.system.product.controller;
 
 import com.djf.tbmt.project.system.product.entity.Product;
-import com.djf.tbmt.project.system.product.service.IProductService;
+import com.djf.tbmt.project.system.product.service.ProductServiceImpl;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -13,12 +15,12 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     @Autowired
-    private IProductService productService;
+    private ProductServiceImpl productService;
 
     @GetMapping()
-    public String getProduct(){
-        List<Product> list = productService.selectProductList();
-        String name = list.get(0).getName();
-        return null;
+    @ResponseBody
+    public PageInfo<Product> getProduct(){
+        PageInfo<Product> productPage = productService.selectProductList();
+        return productPage;
     }
 }

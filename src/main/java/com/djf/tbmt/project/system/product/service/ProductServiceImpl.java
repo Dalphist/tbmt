@@ -2,20 +2,24 @@ package com.djf.tbmt.project.system.product.service;
 
 import com.djf.tbmt.project.system.product.entity.Product;
 import com.djf.tbmt.project.system.product.mapper.ProductMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class IProductService implements ProductService {
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductMapper productMapper;
 
     @Override
-    public List<Product> selectProductList() {
-
-        return productMapper.selectProductList();
+    public PageInfo<Product> selectProductList() {
+        PageHelper.startPage(1, 5);
+        List<Product> list = productMapper.selectProductList();
+        PageInfo<Product> pageInfo = new PageInfo<>(list);
+        return pageInfo;
     }
 }
