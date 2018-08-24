@@ -1,20 +1,31 @@
 package com.djf.tbmt.project.system.product.entity;
 
-/**
- * 商品实体类
- */
+import java.math.BigDecimal;
+import java.util.Date;
+
 public class Product {
     private String id;
-    private String bar_code;
+
+    private String barCode;
+
     private String name;
-    private String category_id;
-    private Double stock_warn;
+
+    private String categoryId;
+
+    private Double stockWarn;
+
     private String unit;
-    private String create_time;
-    private String create_user;
-    private String update_time;
-    private String update_user;
+
+    private Date createTime;
+
+    private String createUser;
+
+    private Date updateTime;
+
+    private String updateUser;
+
     private String state;
+
     private String memo;
 
     public String getId() {
@@ -22,15 +33,15 @@ public class Product {
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.id = id == null ? null : id.trim();
     }
 
-    public String getBar_code() {
-        return bar_code;
+    public String getBarCode() {
+        return barCode;
     }
 
-    public void setBar_code(String bar_code) {
-        this.bar_code = bar_code;
+    public void setBarCode(String barCode) {
+        this.barCode = barCode == null ? null : barCode.trim();
     }
 
     public String getName() {
@@ -38,23 +49,23 @@ public class Product {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
-    public String getCategory_id() {
-        return category_id;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(String category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId == null ? null : categoryId.trim();
     }
 
-    public Double getStock_warn() {
-        return stock_warn;
+    public Double getStockWarn() {
+        return stockWarn;
     }
 
-    public void setStock_warn(Double stock_warn) {
-        this.stock_warn = stock_warn;
+    public void setStockWarn(Double stockWarn) {
+        this.stockWarn = stockWarn;
     }
 
     public String getUnit() {
@@ -62,39 +73,39 @@ public class Product {
     }
 
     public void setUnit(String unit) {
-        this.unit = unit;
+        this.unit = unit == null ? null : unit.trim();
     }
 
-    public String getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(String create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getCreate_user() {
-        return create_user;
+    public String getCreateUser() {
+        return createUser;
     }
 
-    public void setCreate_user(String create_user) {
-        this.create_user = create_user;
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser == null ? null : createUser.trim();
     }
 
-    public String getUpdate_time() {
-        return update_time;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setUpdate_time(String update_time) {
-        this.update_time = update_time;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
-    public String getUpdate_user() {
-        return update_user;
+    public String getUpdateUser() {
+        return updateUser;
     }
 
-    public void setUpdate_user(String update_user) {
-        this.update_user = update_user;
+    public void setUpdateUser(String updateUser) {
+        this.updateUser = updateUser == null ? null : updateUser.trim();
     }
 
     public String getState() {
@@ -102,7 +113,7 @@ public class Product {
     }
 
     public void setState(String state) {
-        this.state = state;
+        this.state = state == null ? null : state.trim();
     }
 
     public String getMemo() {
@@ -110,22 +121,22 @@ public class Product {
     }
 
     public void setMemo(String memo) {
-        this.memo = memo;
+        this.memo = memo == null ? null : memo.trim();
     }
 
     @Override
     public String toString() {
         return "Product{" +
                 "id='" + id + '\'' +
-                ", bar_code='" + bar_code + '\'' +
+                ", barCode='" + barCode + '\'' +
                 ", name='" + name + '\'' +
-                ", category_id='" + category_id + '\'' +
-                ", stock_warn=" + stock_warn +
+                ", categoryId='" + categoryId + '\'' +
+                ", stockWarn=" + stockWarn +
                 ", unit='" + unit + '\'' +
-                ", create_time='" + create_time + '\'' +
-                ", create_user='" + create_user + '\'' +
-                ", update_time='" + update_time + '\'' +
-                ", update_user='" + update_user + '\'' +
+                ", createTime=" + createTime +
+                ", createUser='" + createUser + '\'' +
+                ", updateTime=" + updateTime +
+                ", updateUser='" + updateUser + '\'' +
                 ", state='" + state + '\'' +
                 ", memo='" + memo + '\'' +
                 '}';
