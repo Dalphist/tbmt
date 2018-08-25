@@ -18,7 +18,7 @@
     <result column="remark" property="remark" jdbcType="VARCHAR" />
   </resultMap>
 
-  <select id="selectMenusByUserId" parameterType="Long" resultMap="MenuResult">
+  <select id="selectMenusByUserId" parameterType="String" resultMap="MenuResult">
       select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time
       from sys_menu m
            left join sys_role_menu rm on m.menu_id = rm.menu_id

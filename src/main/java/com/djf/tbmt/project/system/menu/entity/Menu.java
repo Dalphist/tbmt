@@ -3,11 +3,11 @@ package com.djf.tbmt.project.system.menu.entity;
 import java.util.Date;
 
 public class Menu {
-    private Integer menuId;
+    private String menuId;
 
     private String menuName;
 
-    private Integer parentId;
+    private String parentId;
 
     private Integer orderNum;
 
@@ -31,11 +31,11 @@ public class Menu {
 
     private String remark;
 
-    public Integer getMenuId() {
+    public String getMenuId() {
         return menuId;
     }
 
-    public void setMenuId(Integer menuId) {
+    public void setMenuId(String menuId) {
         this.menuId = menuId;
     }
 
@@ -47,11 +47,11 @@ public class Menu {
         this.menuName = menuName == null ? null : menuName.trim();
     }
 
-    public Integer getParentId() {
+    public String getParentId() {
         return parentId;
     }
 
-    public void setParentId(Integer parentId) {
+    public void setParentId(String parentId) {
         this.parentId = parentId;
     }
 

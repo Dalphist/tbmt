@@ -19,6 +19,14 @@
     id, bar_code, name, category_id, stock_warn, unit, create_time, create_user, update_time, 
     update_user, state, memo
   </sql>
+
+  <select id="selectProductList" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from product
+  </select>
+
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />

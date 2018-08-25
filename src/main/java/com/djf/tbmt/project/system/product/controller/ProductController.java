@@ -1,5 +1,6 @@
 package com.djf.tbmt.project.system.product.controller;
 
+import com.djf.tbmt.project.system.product.entity.Product;
 import com.djf.tbmt.project.system.product.service.ProductServiceImpl;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;

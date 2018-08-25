@@ -1,5 +1,7 @@
 package com.djf.tbmt.project.system.product.service;
 
+import com.djf.tbmt.project.system.product.entity.Product;
+import com.djf.tbmt.project.system.product.mapper.ProductMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,6 @@ public class ProductServiceImpl implements ProductService {
     public PageInfo<Product> selectProductList() {
         PageHelper.startPage(1, 5);
         List<Product> list = productMapper.selectProductList();
-        return new PageInfo<>(list);
+        return new PageInfo<Product>(list);
     }
 }
